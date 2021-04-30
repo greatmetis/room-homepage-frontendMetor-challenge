@@ -8,67 +8,69 @@
   <title>Frontend Mentor | Room homepage</title>
 </head>
 <body>
-  <section  class="upper-section">
-    <div class="left">
-      <div class="slide imgbox">
-        <div class="imgbox-inner">
-          <div class="image slide-image"></div>
+  <div class="overlay"></div>
+    <section  class="upper-section">
+      <div class="left">
+        <div class="slide imgbox">
+          <div class="imgbox-inner">
+            <div class="image slide-image"></div>
+          </div>
+        </div>
+        <header>
+          <div class="container">
+            <div class="logo"></div>
+            <div class="nav-hamburger"></div>
+            <ul class="nav">
+              <li class="nav-close"></li>
+              <li><a href="">home</a></li>
+              <li><a href="">shop</a></li>
+              <li><a href="">about</a></li>
+              <li><a href="">contact</a></li>
+            </ul>
+          </div>
+        </header>
+        <ul class="slide-nav">
+          <li class="selected" data-id="0"></li>
+          <li data-id="1"></li>
+          <li data-id="2"></li>
+        </ul>
+        <div class="btn-group">
+          <div class="btn arrow-left"></div>
+          <div class="btn arrow-right"></div>
         </div>
       </div>
-      <header>
-        <div class="container">
-          <div class="logo"></div>
-          <div class="nav-hamburger"></div>
-          <ul class="nav">
-            <li class="nav-close"></li>
-            <li><a href="">home</a></li>
-            <li><a href="">shop</a></li>
-            <li><a href="">about</a></li>
-            <li><a href="">contact</a></li>
-          </ul>
+      <div class="right">
+        <h1 class="slide-title">Discover innovative ways to decorate</h1>
+        <p class="slide-text">
+          We provide unmatched quality, comfort, and style for property owners across the country. 
+          Our experts combine form and function in bringing your vision to life. Create a room in your 
+          own style with our collection and make your property a reflection of you and what you love.
+        </p>
+        <a class="action-shop" href="#">
+          <p>Shop now</p>
+          <img src="./images/icon-arrow.svg" alt=" >">
+        </a>
+      </div>
+    </section>
+    <section class="lower-section">
+      <div class="low-image-dark" style="background-image: url(./images/image-about-dark.jpg);"></div>
+      <div class="middle-text">
+        <h6>About our furniture</h6>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.</p>
+      </div>
+        
+      <div class="low-image-light imgbox" style="background-image: url(./images/image-about-light.jpg);">
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Metis Teng</a>.
         </div>
-      </header>
-      <ul class="slide-nav">
-        <li class="selected" data-id="0"></li>
-        <li data-id="1"></li>
-        <li data-id="2"></li>
-      </ul>
-      <div class="btn-group">
-        <div class="btn arrow-left"></div>
-        <div class="btn arrow-right"></div>
       </div>
-    </div>
-    <div class="right">
-      <h1 class="slide-title">Discover innovative ways to decorate</h1>
-      <p class="slide-text">
-        We provide unmatched quality, comfort, and style for property owners across the country. 
-        Our experts combine form and function in bringing your vision to life. Create a room in your 
-        own style with our collection and make your property a reflection of you and what you love.
-      </p>
-      <a class="action-shop" href="#">
-        <p>Shop now</p>
-        <img src="./images/icon-arrow.svg" alt=">">
-      </a>
-    </div>
-  </section>
-  <section class="lower-section">
-    <div class="low-image-dark" style="background-image: url(./images/image-about-dark.jpg);"></div>
-    <div class="middle-text">
-      <h6>About our furniture</h6>
-      <p>Our multifunctional collection blends design and function to suit your individual taste.
-        Make each room unique, or pick a cohesive theme that best express your interests and what
-        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-        or anything in between. Product specialists are available to help you create your dream space.</p>
-    </div>
-      
-    <div class="low-image-light imgbox" style="background-image: url(./images/image-about-light.jpg);">
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Metis Teng</a>.
-      </div>
-    </div>
-  </section>
-
+    </section>
+  
+  
   
 
   <!-- Javascript -->

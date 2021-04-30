@@ -26,9 +26,11 @@ const slides = [{
 // Navigation bar
 $('.nav-hamburger').click(()=>{
     $(".nav").css('top','0px')
+    $(".overlay").addClass("active")
 })
 $('.nav-close').click(()=>{
     $(".nav").css('top','-160px')
+    $(".overlay").removeClass("active")
 })
 
 // Image-trigger
@@ -57,11 +59,6 @@ $('.arrow-right').click(()=>{
     }
 })
 
-// Slide-nav
-
-
-
-
 /*------ Functions------*/
 function imageSlide(i){
     $(".slide-image").css("background-image",`${slides[i].image}`)
@@ -83,5 +80,4 @@ function checkSlideState(i){
         slideNavItem2.removeClass("selected")
         slideNavItem1.removeClass("selected")
     }
-   
 }
