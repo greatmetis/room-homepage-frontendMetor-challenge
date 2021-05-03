@@ -22,7 +22,14 @@ const slides = [{
 },
 ]
 /*------ Event Listener ------*/
+let i = 0
+const slideNav= $(".slide-nav")
+const slideNavItem1 =$(".slide-nav li:nth-child(1)")
+const slideNavItem2 =$(".slide-nav li:nth-child(2)")
+const slideNavItem3 =$(".slide-nav li:nth-child(3)")
 
+
+$(document).ready(function(){
 // Navigation bar
 $('.nav-hamburger').click(()=>{
     $(".nav").css('top','0px')
@@ -34,18 +41,15 @@ $('.nav-close').click(()=>{
 })
 
 // Image-trigger
-let i = 0
-
-const slideNav= $(".slide-nav")
-const slideNavItem1 =$(".slide-nav li:nth-child(1)")
-const slideNavItem2 =$(".slide-nav li:nth-child(2)")
-const slideNavItem3 =$(".slide-nav li:nth-child(3)")
-
 $(".slide-image").css("background-image",`${slides[i].image}`)
 
 $('.arrow-left').click(()=>{
     if(i>0){
         i--
+        imageSlide(i)
+        checkSlideState(i)
+    }else if(i<=0){
+        i = 2 
         imageSlide(i)
         checkSlideState(i)
     }
@@ -56,8 +60,26 @@ $('.arrow-right').click(()=>{
         i++
         imageSlide(i)
         checkSlideState(i)
+    }else if(i>=2){
+        i =0
+        imageSlide(i)
+        checkSlideState(i)
     }
 })
+
+// Adding background color for nav-hamburger
+$("body").scroll( function(){
+    const scrollDistance = $("body").scrollTop();
+    const wheel = $(window).off('wheel')
+    if(scrollDistance>200){
+        $(".nav-hamburger").css("background-color","#5e7d33b8")
+
+    }else{
+        $(".nav-hamburger").css("background-color","transparent")
+    }
+    })
+})
+
 
 /*------ Functions------*/
 function imageSlide(i){
@@ -81,3 +103,4 @@ function checkSlideState(i){
         slideNavItem1.removeClass("selected")
     }
 }
+
